@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.7.1.min.js"></script>
+    <script>
+        window.onload = () =>{
+            $('.move').click(()=>{
+                $("img").animate({left : '300px', height : "300px", 
+                                    width : "350px"})
+                                    //left에서 300px 정도 떨어져라
+                                    //animate : 순차적인 변동(점점 커짐)
+                                    //css : 일반 변동(130 -> 300)
+            })
+            $('.init').click(()=>{
+                $("img").animate({left : '0px', height : "100px", 
+                                    width : "130px"})
+
+            })
+        }
+    </script>
+</head>
+<body>
+    <button class="move">확대</button>
+    <button class="init">축소</button>
+    <hr>
+    <img src="resources/images/car01.png" width="130px"
+                    height="100px" style="position : relative;"> 
+                    <!--position : default - static / 위치를 변동하는 것-->
+</body>
+</html>
